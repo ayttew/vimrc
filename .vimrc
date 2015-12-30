@@ -1,23 +1,61 @@
-" Switch on line numbering
-set number
+" My .vimrc
+" 
+" Author: Alex Rudakov <rudakov43@gmail.com>
+"
+" Created:  30 Dec 2015
+" Last edit: 30 Dec 2015
+"
+" Adapted from Jake Zimmerman's .vimrc and 'vim-as-ide' repo
+" (https://github.com/jez)
+"
+" Installation:
+" 1. Put this thing to your $MYVIMRC (~/.vimrc or whatever)
+" 2. Install pathogen to handle plugins:
+"
+" mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+" curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+"
+" 3. Install airline:
+"
+" git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
+"
+"
 
+" This is for vim, not for vi
 set nocompatible
-filetype off
 
-" Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Allow backspace in insert mode
+set backspace=indent,eol,start
+" Show ruler
+set ruler
+" Show line numbers
+set number
+" Show incomplete commands
+set showcmd
 
-Bundle 'gmarik/vundle'
+set incsearch
+set hlsearch
 
-filetype plugin indent on
-
+" You know what it means
 syntax on
 
-set fileformat=unix
-set encoding=utf-8
+" I like typos
+command! WQ wq
+command! Wq wq
+command! Wqa wqa
+command! W w
+command! Q q
 
-" Some useful things
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'scrooloose/nerdtree'
-map <F2> :NERDTreeToggle<CR>
+
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
+set autoindent
+
+" It's plugin time!
+execute pathogen#infect()
