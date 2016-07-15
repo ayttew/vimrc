@@ -3,7 +3,7 @@
 " Author: Alex Rudakov <rudakov43@gmail.com>
 "
 " Created:  30 Dec 2015
-" Last edit: 30 Dec 2015
+" Last edit: 15 Jul 2016
 "
 " Adapted from Jake Zimmerman's .vimrc and 'vim-as-ide' repo
 " (https://github.com/jez)
@@ -15,9 +15,10 @@
 " mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 " curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 "
-" 3. Install airline:
+" 3. Install plusgins:
 "
 " git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
+" git clone https://github.com/scrooloose/nerdtree.git
 "
 "
 
@@ -57,5 +58,11 @@ set expandtab
 set si
 set autoindent
 
+
 " It's plugin time!
 execute pathogen#infect()
+
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
+
+map <F2> :NERDTreeToggle<CR>
