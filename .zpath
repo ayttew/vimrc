@@ -1,0 +1,6 @@
+export PATH=$PATH:~/apache-maven/bin
+export PATH=$PATH:~/opt/red
+export PATH=$PATH:/opt/groovy-2.4.5/bin
+export PATH=$PATH:$GOPATH/
+export PATH=$PATH:/home/ayttew/scala-2.11.8/bin
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

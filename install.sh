@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Installation scripts (teapot)
 # 
 # Author: Alex Rudakov
@@ -7,3 +9,5 @@
 
 ln .vimrc ~/.vimrc
 ln .tmux.conf ~/.tmux.conf
+ln .zprofile ~/.zprofile
+ln .zpath ~/.zpath
