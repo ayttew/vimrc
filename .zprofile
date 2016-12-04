@@ -14,6 +14,6 @@ then source ~/.zwork
 fi
 
 
-if [[ ! $TERM =~ screen ]]; then
-    exec tmux
-fi
+#if [[ ! $TERM =~ screen ]]; then
+#    exec tmux
+#fi
